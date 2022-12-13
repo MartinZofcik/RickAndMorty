@@ -1,0 +1,7 @@
+<form class="form" [formGroup]="nameForm" (ngSubmit)="submit()">
+    <mat-form-field class="example-full-width" >
+      <mat-label>Search by Name</mat-label>
+      <input matInput placeholder="e.g. Rick" name="characterName" id="characterName" formControlName="characterName">
+    </mat-form-field>
+    <button mat-button>Find</button>
+</form>

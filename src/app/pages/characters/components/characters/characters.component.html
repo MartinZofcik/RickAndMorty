@@ -1,0 +1,14 @@
+<div class="characters">
+    <app-character-item 
+        *ngFor="let character of characters" 
+        [character]="character">
+    </app-character-item> 
+</div>
+<div class="pagination">
+    <mat-paginator
+        [length]="numOfCharacters"
+        [pageSize]="20"
+        [hidePageSize]="true"
+        (page)="changePage($event)">
+    </mat-paginator>
+</div>

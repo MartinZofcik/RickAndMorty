@@ -1,0 +1,15 @@
+<div *ngIf="character">
+    <img mat-card-image class="image" [src]="character.image" [alt]="'Photo of '+ character.name">
+    <p>{{character.name}}</p>
+    <p>{{character.status}}</p>
+    <p>{{character.species}}</p>
+    <p *ngIf="character.origin.name !== 'unknown'">{{character.origin.name}}</p>
+    <p>{{character.location.name}}</p>
+    <ul>
+        <mat-nav-list *ngFor="let epi of character.episode">
+            <mat-list-item>
+                <a [href]="epi">{{epi}}</a>
+            </mat-list-item>
+        </mat-nav-list>
+    </ul>
+</div>

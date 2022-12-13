@@ -1,0 +1,7 @@
+<mat-card [routerLink]="['/character', character.id]">
+        <img mat-card-image class="image" [src]="character.image" [alt]="'Photo of '+ character.name">
+    <mat-card-title>
+        <h3>{{character.name}}</h3>
+    </mat-card-title>
+    <mat-card-subtitle>{{character.species}}</mat-card-subtitle>
+</mat-card>
